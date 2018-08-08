@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load staticfiles %}{% load widget_tweaks %} 
+{% block content%}
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+<!-- <h2>ทุนศึกษาต่อ</h2> -->
+<!-- {% if request.user.is_authenticated %}
+<a href="{% url 'upload' %}" >upload</a>
+{% endif %} -->
+<div style="width: 100%">
+    
+<div class="detaillcontent">
+    <h2 >รายการทุนการศึกษา</h2>
+    <table class="uk-table uk-table-hover uk-table-divider uk-padding-remove-top tb" >
+        <thead>
+            <tr>
+                <th><h4 class="uk-margin-remove-bottom" style="color:#fff">วันที่</h4></th>
+                <th><h4 class="uk-margin-remove-bottom" style="color:#fff">รายการทุน</h4></th>
+                <th><h4 class="uk-margin-remove-bottom" style="color:#fff">วันหมดอายุ</h4></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for f in all_public %}
+            <tr>
+                <td>{{ f.start_date }}</td>
+                <td><a href="//{{f.url}} " target="_blank">{{ f.title }}</a></td>
+                 <!-- a href = {{ p.document.url }} -->
+                <td>{{ f.expire_date }}</td>
+                
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <!-- // -->
+ </div>
+
+
+
+    <div class="showPicData"><h3 style="margin-top: 13px;">นักศึกษาทุน</h3>
+    <div class="showPicData1">
+    <div>
+        
+        {% for x in all_student %}
+        <div class="bd">
+                <div class="borderP">
+
+
+                    <div class="nameD">
+                    <img class="imgD"src={{x.image.url}} >
+                    <p class="name"><strong><a href="/page/{{x.id}}">{{x.name}}</a></strong><br><span >{{x.des}}</span></p>
+                    
+                    </div>
+                    
+                    
+
+
+
+
+                </div>
+
+                
+        </div>
+        {% endfor %}
+
+
+</div>
+
+
+
+   
+</div>
+</div>
+
+
+</div>
+
+{% endblock %}
+
+
+<!--                 {% if request.user.is_authenticated %}
+                <td><a href="/edit/{{f.id}}">edit</a></td>
+                <td><a href="/delete/{{f.id}}">delete</a></td>
+                {% endif %} -->

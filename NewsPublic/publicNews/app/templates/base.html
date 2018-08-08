@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title> {% block title %}News {% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/uikit.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit:300,400,500,700&amp;subset=thai">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}">
+</head>
+
+<body >
+<link rel="stylesheet" href="{% static 'css/uikit.min.css' %}" />
+<script src="{% static 'js/uikit.min.js' %}"></script>
+<script src="{% static 'js/uikit-icons.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/increateBase.css' %}" />
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+<script src="{% static 'js/search.js' %}"></script>
+
+
+<div id="app" >
+    <div class="body-block" >
+      <!-- header section -->
+      <div class="navbar" >
+        <div class="header" >
+          <nav class="uk-navbar-container" uk-navbar="mode: click">
+            <div class="uk-navbar-left">
+              <a href="/"><img src="{% static 'img/main-logo.svg' %}" class="main-logo">  </a>
+
+            </div>
+
+            <div class="uk-navbar-right" style="margin-right:-5%;">
+            <div class="uk-navbar-right">
+              <a href="#" class="right">สมัครรับข้อความ</a> 
+              <div class="dropdown">
+
+              <form method="GET" action="/">
+                  <input class="imgg1" placeholder = "Search.." name="q" autocomplete="off" value= {{ request.GET.q }}>
+                  <button type="submit" class="b1"><i class="fa fa-search"></i></button>
+
+                 
+           <!--        <div class="dropdown uk-hidden@l" style="margin-right: 0">
+                  <a class="uk-navbar-toggle" uk-navbar-toggle-icon></a>
+                  <div uk-dropdown="pos: bottom-right; mode: click; animation: uk-animation-slide-top-small; duration: 500">
+                    <ul class="uk-nav uk-dropdown-nav">
+                        <li> </li>
+                    </ul>
+                  </div>
+                </div> -->
+                
+              </form>
+              </div>
+
+
+                <!-- <ul class="uk-navbar-nav uk-visible@l">
+                    <li> </li>
+                </ul> -->
+
+              
+          </nav>
+        </div>
+      </div>
+
+      <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="ratio: 10:3; animation: push">
+       
+          <ul class="uk-slideshow-items">
+              <li>
+                  <img src="{% static 'img/img6.jpg' %}"  alt="" uk-cover>
+                  <div class="centered"> <p class="center  animated slideInRight" >ทุนการศึกษาต่อ</p></div>
+
+              </li>
+              <li>
+                  <img src="{% static 'img/img7.jpg' %}" alt="" uk-cover>
+                  <div class="centered"> <p class="center  animated slideInRight" >ทุนการศึกษาต่อ</p></div>
+              </li>
+              <li>
+                  <img src="{% static 'img/img3.jpg' %}" alt="" uk-cover>
+                  <div class="centered"> <p class="center  animated slideInRight" >ทุนการศึกษาต่อ</p></div>
+              </li>
+              <li>
+                  <img src="{% static 'img/img8.jpg' %}" alt="" uk-cover>
+                  <div class="centered"> <p class="center  animated slideInRight" >ทุนการศึกษาต่อ</p></div>
+              </li>
+          </ul>
+
+          
+
+          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+          <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+      </div>
+      <br><br><br><br><br>
+      <div class="content"  >
+          {% block content %} {% endblock %}
+      </div>
+
+
+<div class="page-footer">
+    <div class="uk-flex footer-flex">
+      <div class="about">
+        <div class="sub-logo">
+          <!-- <img src="static/main-logo.svg" alt=""> -->
+          <img src="{% static 'img/main-logo.svg' %}" class="main-logo">
+        </div>
+        <div class="contact">
+          <h6 class="contact-text">ติดต่อธรรมศาสตร์</h6>
+          <ul class="contact-list">
+            <li>
+              <a href="https://www.facebook.com/thammasat.uni"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/PRTHAMMASAT"><i class="fab fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/thammasat_uni"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/thammasat_official"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="address">
+          <ul class="address-list">
+            <li>
+              <div uk-grid>
+                <p class="uk-width-1-2 title uk-first-column">ท่าพระจันทร์</p>
+                <i uk-toggle="target: #thaprachan;cls: show; animation: uk-animation-slide-bottom-small" class="fas fa-plus uk-width-1-2 uk-text-right"></i>
+              </div>
+              <div id="thaprachan" class="toggle-usage">
+                <p>2 ถนนพระจันทร์ แขวงพระบรมมหาราชวัง, เขตพระนคร, กรุงเทพฯ 10200, ประเทศไทย.</p>
+                <p>Tel. +66 (0) 2613 3333</p>
+              </div>
+            </li>
+            <li>
+              <div uk-grid>
+                <p class="uk-width-1-2 title uk-first-column">ศูนย์รังสิต</p>
+                <i uk-toggle="target: #rangsit;cls: show; animation: uk-animation-slide-bottom-small" class="fas fa-plus uk-width-1-2 uk-text-right"></i>
+              </div>
+              <div id="rangsit" class="toggle-usage">
+                <p>99 หมู่ 18, ถ.พหลโยธิน, คลองหลวง, รังสิต, ปทุมธานี, 12121 ประเทศไทย.</p>
+                <p>Tel. +66 (0) 564 4440-79</p>
+              </div>
+            </li>
+            <li>
+              <div uk-grid>
+                <p class="uk-width-1-2 title uk-first-column">ศูนย์พัทยา</p>
+                <i uk-toggle="target: #pattaya;cls: show; animation: uk-animation-slide-bottom-small" class="fas fa-plus uk-width-1-2 uk-text-right"></i>
+              </div>
+              <div id="pattaya" class="toggle-usage">
+                <p>อาคารบรรยายรวม เลขที่ 39/4 หมู่ 5 ต.โปร่ง อ.บางละมุง จ.ชลบุรี 20150</p>
+                <p>Tel. +66 (0) 3825 9050-55</p>
+              </div>
+            </li>
+            <li>
+              <div uk-grid>
+                <p class="uk-width-1-2 title uk-first-column">ศูนย์ลำปาง</p>
+                <i uk-toggle="target: #lampang;cls: show; animation: uk-animation-slide-bottom-small" class="fas fa-plus uk-width-1-2 uk-text-right"></i>
+              </div>
+              <div id="lampang" class="toggle-usage">
+                <p>248 หมู่ 2 ถ.ลำปาง-เชียงใหม่ ต.ปงยางคก อ.ห้างฉัตร จ.ลำปาง 52190</p>
+                <p>Tel. +66 (0) 5423-7999 โทรสาร +66 (0) 5423-7999 ต่อ 5119</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="faculty-info">
+        <div>
+          <p class="uk-text-lead">ติดต่อสอบถาม</p>
+          <!-- <p>งานบัณฑิตศึกษา ชั้น3 อาหารบรรยายรวม 5</p> -->
+          <p>คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์</p>
+        </div>
+        <div>
+          <p class="uk-text-lead">ที่อยู่</p>
+          <p>99 ม.18 ต.คลองหนึ่ง อ.คลองหลวง จ.ปทุมธานี 12121</p>
+        </div>
+        <div>
+          <p class="uk-text-lead">โทรศัพท์</p>
+          <p>02-564490 ต่อ 2010</p>
+        </div>
+        <div>
+          <p class="uk-text-lead">อีเมลล์</p>
+          <p>sci@sci.tu.ac.th</p><br>
+          <p><a href="{% url 'login' %}"><strong>สำหรับเจ้าหน้าที่</strong></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% block script %}
+<script type="text/javascript">
+var app = new Vue({
+  el: '#app',
+  delimiters: ['[[', ']]'],
+  log:false,
+  data: function () {
+  return {}
+  }
+})
+</script>
+ {% endblock %}
+</body>
+</html>

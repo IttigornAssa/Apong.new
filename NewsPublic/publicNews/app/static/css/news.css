@@ -1,0 +1,179 @@
+
+
+.text1{
+	margin-top: 15px;
+	color: white;
+	color:  #333;
+}
+.text1:hover{
+	text-decoration: none;
+	color: #ffd11a;
+
+}
+
+td{
+	background: white;
+}
+.showPicData{
+	width: 35%;
+	/*background:  white;*/
+	color: white;
+	float: right;
+/*	margin-right: -37.5%;
+	margin-top: -600px;*/
+	margin-top: -57px;
+	
+	
+	display: inline-block;
+	/*position:absolute;*/
+
+
+
+
+
+}
+.showPicData1{
+	overflow: scroll;
+	overflow-x: hidden;
+	height: 400px;
+}
+.borderP{
+	border-bottom: solid 1.2px #e0e0eb;
+	width: 90%;
+	margin: auto;
+	height: 120px;
+}
+.imgD,.nameD{
+	color: black;
+	float: left;
+
+}
+.imgD{
+	margin-right: 5px;
+	height: 95px;
+	width: 85px;
+}
+.nameD{
+	margin-top: 10px;
+	width: 90%;
+
+}
+span{
+	color: gray;
+	margin-top: -10px;
+}
+.name{
+	margin-top: -3px;
+}
+.content{
+	margin-top: -50px;
+}
+.contectsAll{
+
+}@media screen and (max-width: 1080px) {
+	.leftD,.rightD{
+		font-size:20px;	
+		/*float: left;*/
+		height: 80px;
+		font-weight: bold;
+	}
+	.rightD{
+		/*margin-top: -15px;*/
+		/*float: right;*/
+	}
+	.intopD{
+		width: 100%;
+	}
+	.showPicData{
+		float: left;
+		width: 100%;
+		margin-top: 10%;
+		overflow-x: hidden;
+	}
+	.detaillcontent{
+		width: 100%;
+	}
+
+}
+@media screen and (max-width: 760px) {
+	.leftD,.rightD{
+		font-size:20px;	
+		/*float: left;*/
+		height: 80px;
+		font-weight: bold;
+	}
+	.rightD{
+		/*margin-top: -15px;*/
+		/*float: right;*/
+	}
+	.intopD{
+		width: 100%;
+	}
+	.showPicData{
+		float: left;
+		width: 100%;
+		margin-top: 10%;
+		overflow-x: hidden;
+	}
+	.detaillcontent{
+		width: 100%;
+	}
+
+}
+h2,h3{
+	color:#a80228;
+}
+/*td{
+	background: #f2f2f2;
+}*/
+
+
+
+
+
+/*::-webkit-scrollbar {
+    width: 18px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #b38f00; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ffe066; 
+}*/
+
+
+/*.uk-table{
+	width: 70%;
+}*/
+/*@media screen and (min-width: 760px) {
+	.leftD,.rightD{
+		font-size:20px;
+		
+	}
+@media screen and (max-width: 760px) {
+	.leftD,.rightD{
+		font-size:20px;
+		
+	}
+
+}
+@media screen and (min-width: 580px) {
+	.leftD,.rightD{
+		font-size:20px;
+		
+	}
+
+}
+@media screen and (max-width: 480px) {
+	.leftD,.rightD{
+		font-size:15px;
+		
+	}
+
+}*/
+

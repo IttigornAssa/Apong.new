@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content%}
+{% load widget_tweaks %}     
+<link rel="stylesheet" type="text/css" href="{% static 'css/upload.css' %}">
+<!-- ///////////////////////// -->
+<div class="menu">
+      <ul>
+        <li><a class="up1" href="{% url 'upload' %}">อัพโหลด-ทุน</a></li>
+        <li><a class="up2" href="{% url 's_upload' %}">อัพโหลด-นศ.</a></li>
+
+      </ul>
+
+</div>
+<!-- ///////////////////////// -->
+<div class="center1">
+    <div class="uk-grid-collapse uk-child-width-1-2@s uk-margin " uk-grid  style="font-family: Kanit">
+        {% if request.user.is_authenticated %}
+        <!-- <input type="button" value="upload file"> -->
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table border="0" >
+                {% for f in form %}
+                <tr>
+                  <th>{{f.label_tag}}</th>
+                  {% if f.label == 'เริ่มวันที่' or f.label == 'สิ้นสุดวันที่' %}
+                    <td >{% render_field f type='date' class="uk-input" placeholder=f.label %}</td>
+                  {% elif f.label == 'Image' %}
+                    <td >{% render_field f placeholder=f.label %}</td>
+                    <style type="text/css">
+                      .up1{
+                        color: black;
+                      }
+                      .up2{
+                        color: #ffcc00;
+                      }
+                    </style>
+                  {% else %}
+                    <td >{% render_field f class="uk-input" placeholder=f.label %}</td>
+                  {% endif %}
+                </tr>
+                {%endfor%}
+                
+                <tr>
+                  <td></td>
+                  <td style="text-align: right"><button type="submit" class="uk-button uk-button-primary" >Update</button></td>
+                </tr>
+              </table>
+          </form>
+<!--            <form method="post" enctype="multipart/form-data" class="uk-first-column" >
+            {% csrf_token %}
+            <table border="0">
+                
+                <tbody><tr>
+                  <th><label for="id_title">ชื่อเรื่อง:&nbsp;&nbsp;</label></th>
+                  
+                    <td><input type="text" name="title" maxlength="500" placeholder="ชื่อทุน" class="uk-input" required="" id="id_title"></td>
+                  
+                </tr>
+                
+                <tr>
+                  <th><label for="id_start_date">เริ่มวันที่:&nbsp;&nbsp;</label></th>
+                  
+                    <td><input type="date" name="start_date" placeholder="เริ่มวันที่" class="uk-input" required="" id="id_start_date"></td>
+                  
+                </tr>
+                
+                <tr>
+                  <th><label for="id_expire_date">สิ้นสุดวันที่:&nbsp;&nbsp;</label></th>
+                  
+                    <td><input type="date" name="expire_date" placeholder="สิ้นสุดวันที่" class="uk-input" required="" id="id_expire_date"></td>
+                  
+                </tr>
+                
+                <tr>
+                  <th><label for="id_tpye">ประเภท:&nbsp;&nbsp;</label></th>
+                  
+                    <td><input type="text" name="tpye" maxlength="500" placeholder="ประเภทของทุน" class="uk-input" required="" id="id_tpye"></td>
+                  
+                </tr>
+                
+                <tr>
+                  <th><label for="id_contact">ติดต่อ:&nbsp;&nbsp;</label></th>
+                  
+                    <td><input type="text" name="contact" maxlength="500" placeholder="ติดต่อ" class="uk-input" id="id_contact"></td>
+                  
+                </tr>
+                
+                <tr>
+                  <th><label for="id_url">เอกสารแนบ:&nbsp;&nbsp;</label></th>
+                  
+                    <td><input type="text" name="url" maxlength="500" placeholder="Link pdf" class="uk-input" id="id_url"></td>
+                  
+                </tr>
+                
+                <tr>
+                  <td></td>
+                  <td style="text-align: right"><button type="submit" class="uk-button uk-button-primary">Update</button></td>
+                </tr>
+              </tbody></table>
+          </form> -->
+        {% endif %}
+    
+    </div>
+</div>
+
+{% endblock %}

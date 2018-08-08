@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content%}
+{% load widget_tweaks %}     
+<div style="margin-left:20px; margin-top:20px;">
+    <div class="uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid  style="font-family: Kanit">
+        {% if request.user.is_authenticated %}
+        <!-- <input type="button" value="upload file"> -->
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table border="0" >
+                {% for f in form %}
+                <tr>
+                  <th>{{f.label_tag}}</th>
+                  <td >{% render_field f class="uk-input" placeholder=f.label %}</td>
+                </tr>
+                {%endfor%}
+                <!-- {{ form }} -->
+                <tr>
+                  <td></td>
+                  <td style="text-align: right"><button type="submit" class="uk-button uk-button-primary" >Update</button></td>
+                </tr>
+              </table>
+          </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+

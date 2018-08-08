@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content%}
+{% load widget_tweaks %} 
+<link rel="stylesheet" href="{% static 'css/page.css' %}">
+
+
+    
+<aside class="profile-card" style="background-image: url({% static 'img/img.jpg' %});">
+<!-- style="background-image: url({% static 'img/img4.jpg' %});" -->
+ <div class="img2">
+  <header>
+
+    <a href="{{obj.image.url}}" target="_blank">
+      <img class="imgShow" src="{{obj.image.url}}">
+    </a>
+
+    <h1>{{obj.name}}</h1>
+
+
+
+    <h2>เด็กแลกเปลี่ยน 2018</h2>
+
+  </header>
+</div>
+  <div class="profile-bio" >
+
+    <p class="p1">{{obj.des}}</p>
+    <p style="text-align: center;">.....................................เนื้อหาหลัก.....................................
+      <br />..................................................................................</p>
+
+
+      <p style="text-align: center;">.....................................เนื้อหาหลัก.....................................
+      <br />..................................................................................</p><p style="text-align: center;">.....................................เนื้อหาหลัก.....................................
+      <br />..................................................................................</p><p style="text-align: center;">.....................................เนื้อหาหลัก.....................................
+      <br />..................................................................................</p><p style="text-align: center;">
+  </div>
+   <!-- <div class="holver1" style="color: white;font-size: 30px;float: right;">ชี้เมาส์ภายในกล่อง</div> -->
+
+<!--   <ul class="profile-social-links">
+
+    <li>
+      <a href="#">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-twitter.svg">
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-envato.svg">
+      </a>
+    </li>
+
+    <li>
+      <a href="#">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-codepen.svg">
+      </a>
+    </li>
+
+  </ul> -->
+
+</aside>
+
+{% endblock %}

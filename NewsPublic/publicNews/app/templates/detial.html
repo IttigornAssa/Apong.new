@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content%}
+<div class="detaillcontent">
+    <article class="uk-comment ">
+            <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+                <div class="uk-header">
+                    <h2 class="uk-comment-title uk-margin-remove">{{news.title}}</h2>
+                    <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                        <li>{{news.date}}</li>
+                    </ul>
+                </div>
+            </header>
+            <div class="uk-comment-body">
+                <p>{{news.content}}</p>
+            </div>
+    </article>
+
+</div>
+    
+    
+{% endblock %}

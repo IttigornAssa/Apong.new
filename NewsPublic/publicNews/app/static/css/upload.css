@@ -1,0 +1,61 @@
+  .menu{
+    display: inline block;
+    width: 90%;
+    background: white;
+    color: black;
+    font-size: 20px;
+    border-bottom: solid 1px #e0e0eb
+;
+    padding: 0px;
+    margin: 0px;
+    padding-right: 20px;
+  }
+  a{
+     padding-right: 20px;
+     color: black;
+  }
+  a:hover{
+     text-decoration: none;
+     color: #a80228;
+  }
+  .up1{
+    color: #ffcc00;
+  }
+  li{
+    display: inline;
+    margin-right: 30px;
+    border-right: solid 1px #e0e0eb
+;
+  }
+  .uk-input{
+    padding: 6px;
+  }
+  .center1{
+  	margin-left:37%; 
+  	margin-right: 35%;
+    margin-top:3%;
+    width: 50%;
+    transform: scale(1.1);
+    height: 300px;  
+  }
+.label,th{
+	text-align: right;
+}
+td,input{
+	margin-left: 20px;
+}
+#id_image{
+  margin-left: -1px;
+  height: 20px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url("https://assets.echocommunity.org/images/85032db6-de87-47fc-abaf-d1fa3a5f498f/calendar-icon-marketing-image_lg.png") no-repeat;
+    background-size: 100% 100%;
+    width: 15px;
+    height: 15px;
+    border-width: thin;
+    cursor: pointer;
+}

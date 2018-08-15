@@ -123,6 +123,63 @@ span{
 h2,h3{
 	color:#a80228;
 }
+.beforeMap{
+	height: 500px;
+}
+.mouMap{
+	margin: auto;
+	width: 80%;
+	/*background: pink;*/
+	/*margin-top: 15%;*/
+	height: 500px;
+}
+.map2{
+	width: 55px;
+	height: 65px;
+	margin-left: 67%;
+	margin-top: 20%;
+	position: inline-block;
+	color: white;
+
+
+}
+.map3{
+	width: 55px;
+	height: 65px;
+	margin-left: 70%;
+	margin-top: -7%;
+	position: inline-block;
+	color: white;
+}
+
+/*.hidden{
+	display: none;
+}
+
+.location:hover .hidden{
+   display : block;
+ }*/
+
+@media screen and (max-width: 1080px) {
+	.beforeMap{
+		height: 850px;
+		margin: 0;
+	}
+	.mouMap{
+		width: 100%;
+	}
+
+}
+@media screen and (max-width: 760px) {
+	.beforeMap{
+		height: 850px;
+		margin: 0;	
+	}
+	.mouMap{
+		width: 100%;
+	}
+
+}
 /*td{
 	background: #f2f2f2;
 }*/

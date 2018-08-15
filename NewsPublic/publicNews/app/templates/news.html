@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load staticfiles %}{% load widget_tweaks %} 
 {% block content%}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/Newstyle.css' %}">
 <link rel="stylesheet" href="{% static 'css/news.css' %}">
-<!-- <h2>ทุนศึกษาต่อ</h2> -->
-<!-- {% if request.user.is_authenticated %}
-<a href="{% url 'upload' %}" >upload</a>
-{% endif %} -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div style="width: 100%">
+
     
 <div class="detaillcontent">
     <h2 >รายการทุนการศึกษา</h2>
@@ -23,10 +23,10 @@
             <tr>
                 <td>{{ f.start_date }}</td>
                 <td><a href="//{{f.url}} " target="_blank">{{ f.title }}</a></td>
+
                  <!-- a href = {{ p.document.url }} -->
                 <td>{{ f.expire_date }}</td>
                 
-
             </tr>
             {% endfor %}
         </tbody>
@@ -70,10 +70,159 @@
    
 </div>
 </div>
+<br><br>
+<div class="beforeMap"></div>
+
+<div >
+            <style type="text/css">
+            .content{
+                height: 2000px;
+                overflow: auto;
+            }
+            </style>
+            <div class="mouMap" style="background: url({% static 'img/map.jpg' %});background-size:100% 500px;">
+
+                <div><a class="location"href="#"><img class="map2"src="{% static 'img/location.png' %}" ><span class="map2 hidden">MYANMAR<span></img></a></div>
+                <div><a href="#"><img class="map3"src="{% static 'img/location.png' %}" ><span class="map3 hidden">Thai<span></img></a></div>
+
+            </div>
+
+
+            <br><br>
+            <div>
+
+
+
+
+<!-- Mou -->
+ <section id="team">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2><strong>MOU </strong><small>location</small></h2>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb">
+                              <div class="team-image">
+                                   <img src="{% static 'img/pp1.jpg' %}" class="img-responsive" alt="">
+                              </div>
+                              <div class="team-info">
+                                   <h3>Sri lanka</h3>
+       <!--                             <span>I love Teaching</span> -->
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" ><i class="fa fa-angle-double-right"></i> &nbsp; &nbsp;<i class="fa fa-angle-double-right"></i></a></li>
+
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb">
+                              <div class="team-image">
+                                   <img src="{% static 'img/pp2.jpg' %}"  class="img-responsive" alt="">
+                              </div>
+                              <div class="team-info">
+                                   <h3>Japan</h3>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" ><i class="fa fa-angle-double-right"></i> &nbsp; &nbsp;<i class="fa fa-angle-double-right"></i></a></li>
+
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb">
+                              <div class="team-image">
+                                   <img src="{% static 'img/pp3.jpg' %}" class="img-responsive" alt="">
+                              </div>
+                              <div class="team-info">
+                                   <h3>Thailand</h3>
+                                  
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" ><i class="fa fa-angle-double-right"></i> &nbsp; &nbsp;<i class="fa fa-angle-double-right"></i></a></li>
+
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb">
+                              <div class="team-image">
+                                   <img src="{% static 'img/pp5.jpg' %}" class="img-responsive" alt="">
+                              </div>
+                              <div class="team-info">
+                                   <h3>Singapore</h3>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><a href="#" ><i class="fa fa-angle-double-right"></i> &nbsp; &nbsp;<i class="fa fa-angle-double-right"></i></a></li>
+
+                              </ul>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+            </div>
+
+
 
 
 </div>
 
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- <div>
+ <body onload="initialize()">
+    <div id="earth_div"></div>
+  </body>
+
+<script src="http://www.webglearth.com/v2/api.js"></script>
+    <script>
+      var earth;
+      function initialize() {
+        earth = new WE.map('earth_div');
+        earth.setView([46.8011, 8.2266], 3);
+        WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+          attribution: '© OpenStreetMap contributors'
+        }).addTo(earth);
+
+        // Start a simple rotation animation
+        var before = null;
+        requestAnimationFrame(function animate(now) {
+            var c = earth.getPosition();
+            var elapsed = before? now - before: 0;
+            before = now;
+            earth.setCenter([c[0], c[1] + 0.1*(elapsed/30)]);
+            requestAnimationFrame(animate);
+        });
+      }
+    </script>
+    <style>
+      html, body{padding: 0; margin: 0;}
+      #earth_div{ top: 0; right: 0; bottom: 0; left: 0; position: absolute !important;}
+    </style> 
+
+</div> -->
 {% endblock %}
 
 

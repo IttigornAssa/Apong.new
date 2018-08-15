@@ -32,7 +32,7 @@ def public_upload(request):
         form = MOUForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('/')
+            return redirect('/upload')
     else:
         form = MOUForm()
     return render(request, 'upload.html', {

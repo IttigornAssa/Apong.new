@@ -106,8 +106,8 @@
                     </div>
 
                     <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
+                         <div class="mou-team">
+                              <div class="mou-image">
                                    <img src="{% static 'img/pp1.jpg' %}" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
@@ -115,30 +115,30 @@
        <!--                             <span>I love Teaching</span> -->
                               </div>
                               <ul class="social-icon">
-                                   <li><a href="#" ><i class="fa fa-angle-double-right"></i> &nbsp; &nbsp;<i class="fa fa-angle-double-right"></i></a></li>
+                                   <li class="rightA"><a href="#" ><i class="fa fa-angle-double-right"></i> &nbsp; &nbsp;</a></li>
 
                               </ul>
                          </div>
                     </div>
 
                     <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
+                         <div class="mou-team">
+                              <div class="mou-image">
                                    <img src="{% static 'img/pp2.jpg' %}"  class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
                                    <h3>Japan</h3>
                               </div>
                               <ul class="social-icon">
-                                   <li><a href="#" ><i class="fa fa-angle-double-right"></i> &nbsp; &nbsp;<i class="fa fa-angle-double-right"></i></a></li>
+                                   <li class="rightA"><a href="#" ><i class="fa fa-angle-double-right"></i> &nbsp; &nbsp;</a></li>
 
                               </ul>
                          </div>
                     </div>
 
                     <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
+                         <div class="mou-team">
+                              <div class="mou-image">
                                    <img src="{% static 'img/pp3.jpg' %}" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
@@ -146,22 +146,22 @@
                                   
                               </div>
                               <ul class="social-icon">
-                                   <li><a href="#" ><i class="fa fa-angle-double-right"></i> &nbsp; &nbsp;<i class="fa fa-angle-double-right"></i></a></li>
+                                   <li class="rightA"><a href="#" ><i class="fa fa-angle-double-right"></i> &nbsp; &nbsp;</a></li>
 
                               </ul>
                          </div>
                     </div>
 
                     <div class="col-md-3 col-sm-6">
-                         <div class="team-thumb">
-                              <div class="team-image">
+                         <div class="mou-team">
+                              <div class="mou-image">
                                    <img src="{% static 'img/pp5.jpg' %}" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
                                    <h3>Singapore</h3>
                               </div>
                               <ul class="social-icon">
-                                   <li><a href="#" ><i class="fa fa-angle-double-right"></i> &nbsp; &nbsp;<i class="fa fa-angle-double-right"></i></a></li>
+                                   <li class="rightA"><a href="#" ><i class="fa fa-angle-double-right"></i> &nbsp; &nbsp;</a></li>
 
                               </ul>
                          </div>
@@ -171,7 +171,23 @@
           </div>
      </section>
 
-            </div>
+     <section id="team2">
+
+            <h2><strong>ภาพกิจกรรมนักศึกษา </strong></h2>
+            <marquee>
+                {% for x in all_student %}
+                 <img class="imgD"src={{x.image.url}} width="100" >
+                {% endfor %}
+            </marquee>
+
+
+
+
+
+
+
+     </section>
+    </div>
 
 
 

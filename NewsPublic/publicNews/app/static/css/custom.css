@@ -113,8 +113,10 @@ table .uk-table-hover{
 .page-footer {
   background-color: #F1F1F3;
   width: calc(100% - 24px);
-  max-width: 1380px;
+  /*max-width: 1380px;*/
+  width: 100%;
   padding: 64px 0 24px 24px;
+  margin: auto;
   bottom: 0;
 }
 
@@ -247,6 +249,8 @@ table .uk-table-hover{
     border-right: solid 1px #c8c6c6;
   }
 
+
+
 }
 
 @media screen and (max-width: 1080px) {
@@ -259,3 +263,7 @@ table .uk-table-hover{
   
 }
 
+
+.navbar{
+  width: 100%;
+}
